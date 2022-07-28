@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Palanquin&family=Roboto&family=Staatliches&display=swap');
+
+:root {
+    --bg-header: #8E9AAF;
+    --bg-logo: #CBC0D3;
+    --bg-body: #EFF1FF;
+    --bg-tag: #FEEAFA;
+    --fc-text: #23053A;
+    --fc-logo: #FFFFFF;
+    --fc-tag: #4A4E69;
+
+    --ff-palanquin:'Palanquin', sans-serif;
+    --ff-staatliches:'Staatliches', cursive;
+    --ff-opensans: 'Open Sans', sans-serif;
+    --ff-roboto: 'Roboto', sans-serif;
+
+    font-size: 62.5%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: var(--ff-staatliches);
+}
+
+.page {
+    width: 38.4rem;
+    margin: 0 auto;
+    background-color: var(--bg-body);
+    padding-bottom: 6rem;
+}
+
+header {
+    text-align: center;
+    height: 27.9rem;
+    background-color: var(--bg-header);
+    padding: 3.2rem 8.6rem 0;
+    position: relative;
+    z-index: 2;
+}
+
+aside {
+    display: none;
+}
+
+header img {
+    margin-bottom: 3.2rem;
+    width: 13.7rem;
+    height: 13.7rem;
+}
+
+header h1 {
+    font-weight: 400;
+    font-size: 4.0rem;
+    line-height: 3.4rem;
+    letter-spacing: 0.05em;
+    color: var(--fc-logo);
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+}
+
+.bg-logo {
+    position: absolute;
+    left: 0;
+    top: 200px;
+    width: 100%;
+    height: 4.9rem;
+    background-color: var(--bg-logo);
+    z-index: -1;
+}
+
+main {
+    width: 32rem;
+    margin: 1.4rem auto 0;
+}
+
+main p {
+    font-family: var(--ff-palanquin);
+    font-weight: 400;
+    font-size: 2.0rem;
+    line-height: 1.5rem;
+    margin: 0 auto 6.3rem;
+    text-align: center;
+    width: 30.5rem;
+    color: var(--fc-text);  
+}
+
+.card1, .card2, .card3,
+.card4, .card5, .card6 {
+    position: relative;
+    margin-bottom: 3.6rem;
+}
+
+span {
+    position: absolute;
+    right: 1.6rem;
+    top: 1.6rem;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 34px;  
+    letter-spacing: 0.05em;
+    color: var(--fc-tag);
+    padding: 0 2.4rem;
+    border-radius: 20px;
+    background-color: var(--bg-tag);
+    z-index: +3;
+
+    animation: topToDown .7s ease-in-out;
+}
+
+img {
+    animation: downToTop .7s ease-in-out;
+}
+
+footer {
+    display: none;
+}
+
+@keyframes downToTop {
+    from {
+        opacity: 0;
+        transform: translateY(+15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@keyframes topToDown {
+    from {
+        opacity: 0;
+        transform: translateY(-15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+
+
+@media (min-width: 900px) {
+    .page {
+        width: 128rem;
+        margin: 0;
+        display: flex;
+        gap: 9.8rem;
+        height: 72rem;
+        padding-bottom: 11.8rem;
+    }
+    
+    .bg-logo {
+        
+        width: 37.7rem;
+        top: 231px;
+        
+    }
+
+    header {
+        text-align: center;
+        width: 47.7rem;
+        height: 72rem;
+        padding: 0;
+    }
+
+    header img {
+        margin-top: 32px;
+        width: 214px;
+        height: 167px;
+        margin-bottom: 34px;
+    }
+
+    aside {
+        margin: 0 auto;
+    }
+
+    aside p {
+        font-family: var(--ff-roboto);
+        font-weight: 400;
+        font-size: 1.6rem;
+        line-height: 2.0rem;
+        color: var(--fc-logo);
+        width: 275px;
+        margin: 5.2rem auto 0;
+    }
+
+    main {
+        position: relative;
+        width: 903px;
+        margin: 0;
+        padding-top: 6.4rem;
+        padding-right: 8.1rem;
+        display: grid;
+        gap: 3.2rem; 
+        grid-template-areas: "A B C"
+            "D B F"
+            "D E F";  
+    }
+
+    span {
+        display: none;
+    }
+
+    .card1 img, .card3 img, .card5 img {
+        width: 220px;
+        height: 150px;
+    }
+
+    .card2 img, .card4 img, .card6 img {
+        width: 220px;
+        height: 350px;
+    }
+
+    .card1 {
+        grid-area: A;
+        margin: 0;
+    }
+
+    .card2 {
+        grid-area: B;
+        margin: 0;
+    }
+
+    .card3 {
+        grid-area: C;
+        margin: 0;
+    }
+
+    .card4 {
+        grid-area: D;
+        margin: 0;
+    }
+
+    .card5 {
+        grid-area: E;
+        margin: 0;
+    }
+
+    .card6 {
+        grid-area: F;
+        margin: 0;
+    }
+        
+    main p {
+        display: none;
+    }
+
+    aside {
+        display: block;
+    }
+
+    footer {
+        position: absolute;
+        right: 147px;
+        bottom: -60px;
+        font-family: var(--ff-opensans);
+        display: block;
+        font-weight: 400;
+        font-size: 1.4rem;
+        line-height: 2.8rem;
+        text-align: center;
+        color: var(--fc-tag);
+        width: 59.2rem;
+    }
+
+    footer a {
+        color: var(--fc-tag);
+        font-weight: 700;
+        text-decoration: none;
+    }
+}
