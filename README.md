@@ -12,3 +12,4 @@ Project with grid template, develop for Explorer at Rocketseat.
 ## Authors
 
 - [@dev-rafael92as](https://github.com/dev-rafael92as)
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/rafael92as/)
